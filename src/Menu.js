@@ -1,7 +1,9 @@
 import React from "react";
+import Home from "./components/Home.js"
 
 function Menu() {
   return (
+    <div>
     <aside className="menu">
       <ul className="menu-list">
         <li>
@@ -27,6 +29,8 @@ function Menu() {
         </li>
       </ul>
     </aside>
+    <Home />
+    </div>
   );
 }
 
