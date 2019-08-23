@@ -1,6 +1,6 @@
 import React from "react";
 import "bulma/css/bulma.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import "./App.css";
 import Menu from "./Menu.js";
@@ -13,10 +13,14 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Menu />
+      <Menu /><div>
+          <Router exact path="/" component={Home} />
+        </div>
+
 
     </div>
   );
 }
 
 export default App;
+
