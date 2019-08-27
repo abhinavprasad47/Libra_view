@@ -1,8 +1,10 @@
 import React from "react";
 import Home from "./Home.js";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Logs from "./Logs"
-
+import Logs from "./Logs";
+import Books from "./Books";
+import Author from "./Author"
+import User from "./AddUser"
 
 function Menu() {
   return (
@@ -18,13 +20,13 @@ function Menu() {
          
           </li>
           <li>
-            <Link to>All books</Link>
+            <Link to="/Books">All books</Link>
           </li>
           <li>
-            <Link >All authors</Link>
+            <Link to="/Author">All authors</Link>
           </li>
           <li>
-          <Link>Add user</Link>
+          <Link to="/User">Add user</Link>
           </li>
           <li>
           <Link>Log Book Echanges</Link>
@@ -36,6 +38,9 @@ function Menu() {
       </aside>
       <Route exact path="/" component={Home} />
         <Route path="/Logs" component={Logs} />
+        <Route path="/Books" component={Books} />
+        <Route path="/Author" component={Author} />
+        <Route path="/User" component={User} />
       </Router>
     </div>
   );
