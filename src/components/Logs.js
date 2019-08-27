@@ -1,7 +1,11 @@
 import React from "react";
 
 function Logs () {
-    return();
+    return(
+        <div>
+            <a>dadad</a>
+        </div>
+    );
 };
 
 export default Logs ;
