@@ -3,7 +3,7 @@ import React from "react";
 function Logs () {
     return(
         <div>
-            <a>dadad</a>
+            <h1>dadad</h1>
         </div>
     );
 };
