@@ -1,35 +1,42 @@
 import React from "react";
-import Home from "./Home.js"
+import Home from "./Home.js";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Logs from "./Logs"
+
 
 function Menu() {
   return (
     <div>
-    <aside className="menu">
-      <ul className="menu-list">
-        <li>
-          <a>Home</a>
-        </li>
-        <li>
-          <a herf = "/logs">All Logs</a>
-        </li>
-        <li>
-          <a>All books</a>
-        </li>
-        <li>
-          <a>All authors</a>
-        </li>
-        <li>
-          <a>Add user</a>
-        </li>
-        <li>
-          <a>Log Book Echanges</a>
-        </li>
-        <li>
-          <a>Add Books</a>
-        </li>
-      </ul>
-    </aside>
-    <Home />
+    <Router>
+      <aside className="menu">
+        <ul className="menu-list">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+          <Link to="/Logs">All Logs</Link>
+         
+          </li>
+          <li>
+            <Link to>All books</Link>
+          </li>
+          <li>
+            <Link >All authors</Link>
+          </li>
+          <li>
+          <Link>Add user</Link>
+          </li>
+          <li>
+          <Link>Log Book Echanges</Link>
+          </li>
+          <li>
+          <Link>Add Books</Link>
+          </li>
+        </ul>
+      </aside>
+      <Route exact path="/" component={Home} />
+        <Route path="/Logs" component={Logs} />
+      </Router>
     </div>
   );
 }
