@@ -19,6 +19,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
       run: |
+        dig +short myip.opendns.com @resolver1.opendns.com
         npm install
         npm run build
         npm test
