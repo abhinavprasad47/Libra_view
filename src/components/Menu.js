@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{Component} from "react";
 import Home from "./Home.js";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Logs from "./Logs";
@@ -6,7 +6,8 @@ import Books from "./Books";
 import Author from "./Author"
 import User from "./AddUser"
 
-function Menu() {
+class Menu extends Component {
+  render(){
   return (
     <div>
     <Router>
@@ -45,5 +46,5 @@ function Menu() {
     </div>
   );
 }
-
+}
 export default Menu;
