@@ -1,8 +1,8 @@
-import React from "react";
+import React , {Component} from "react";
 
 
-function Nav() {
-
+class Nav extends Component {
+render(){
 return (
 
     <div className = "nav-bar">
@@ -15,6 +15,7 @@ return (
         </nav>
     </div>
     );
-    };
+    }
+}
 
 export default Nav;
