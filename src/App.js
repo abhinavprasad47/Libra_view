@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{Component} from "react";
 import "bulma/css/bulma.css";
 
 
@@ -9,7 +9,8 @@ import Nav from "./components/Nav.js";
 
 
 
-function App() {
+class App extends Component {
+  render(){
   return (
     <div className="App">
       <Nav />
@@ -17,6 +18,7 @@ function App() {
 
     </div>
   );
+}
 }
 
 export default App;
