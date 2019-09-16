@@ -13,21 +13,12 @@ class Author extends Component {
         }
     }
     componentDidMount() {
-        axios.get(`http://libra-cek.herokuapp.com/API/Authors/`,{
-            method: 'GET',
-            mode: 'no-cors',
-            headers: {
-              'Access-Control-Allow-Origin': '*',
-              'Content-Type': 'application/json',
-            },
-            withCredentials: true,
-            credentials: 'same-origin',
-        })
+        axios.get(`http://libra-cek.herokuapp.com/API/Authors/`)
       .then(res => {
         const author = res.data;
         this.setState({ author });
       })
-      } 
+      }
     render() {
     return(
         <div>
