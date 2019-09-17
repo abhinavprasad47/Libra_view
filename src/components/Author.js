@@ -10,7 +10,7 @@ function Author() {
    const [author ,setAuthor] = useState([])
     
    const fetchAuthor = async () => {
-       await axios.get(`http://libra-cek.herokuapp.com/API/Authors/`)
+       await axios.get(`https://libra-cek.herokuapp.com/API/Authors/`)
       .then(res => {
         const author = res.data;
         setAuthor( author );
