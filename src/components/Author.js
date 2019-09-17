@@ -17,7 +17,7 @@ function Author() {
       })};
       useEffect(()=> {fetchAuthor(author)},[author])
     return(
-        <div className="container">
+        <div className="content">
             <Table striped bordered hover>
   <thead>
     <tr>
