@@ -18,13 +18,15 @@ class Books extends Component {
     }
     render(){
     return(
-              <div>
+              <div class = "content">
                   <Table striped bordered hover>
         <thead>
           <tr>
             <th>#</th>
             <th>First Name</th>
             <th>Last Name</th>
+            <th>Language</th>
+            <th>Edition</th>
           </tr>
         </thead>
         {this.state.books.map(book => (
