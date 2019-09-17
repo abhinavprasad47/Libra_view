@@ -12,7 +12,7 @@ class Menu extends Component {
     <div>
     <Router>
       <aside className="menu">
-        <ul className="menu-list">
+        <ul className="sidebar">
           <li>
             <Link to="/">Home</Link>
           </li>
