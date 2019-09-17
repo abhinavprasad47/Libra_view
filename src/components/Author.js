@@ -13,7 +13,7 @@ class Author extends Component {
         }
     }
     componentDidMount() {
-        axios.get(`http://libra-cek.herokuapp.com/API/Authors/`)
+        axios.get(`https://libra-cek.herokuapp.com/API/Authors/`)
       .then(res => {
         const author = res.data;
         this.setState({ author });
