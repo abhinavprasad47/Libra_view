@@ -1,27 +1,23 @@
-import React ,{ Component} from "react";
+import React ,{useState ,useEffect}  from "react";
 
 import Table from 'react-bootstrap/Table'
 
 import axios from 'axios';
 
 
-class Author extends Component {
-    constructor(){
-        super()
-        this.state = {
-            author : []
-        }
-    }
-    componentDidMount() {
-        axios.get(`http://libra-cek.herokuapp.com/API/Authors/`)
+function Author() {
+
+   const [author ,setAuthor] = useState([])
+    
+   const fetchAuthor = async () => {
+       await axios.get(`http://libra-cek.herokuapp.com/API/Authors/`)
       .then(res => {
         const author = res.data;
-        this.setState({ author });
-      })
-      }
-    render() {
+        setAuthor( author );
+      })};
+      useEffect(()=> {fetchAuthor(author)},[author])
     return(
-        <div>
+        <div className="container">
             <Table striped bordered hover>
   <thead>
     <tr>
@@ -30,7 +26,7 @@ class Author extends Component {
       <th>Last Name</th>
     </tr>
   </thead>
-  {this.state.author.map(author => (
+  {author.map((author) => (
   <tbody>
     <tr>
       <td>{author.id}</td>
@@ -42,8 +38,8 @@ class Author extends Component {
   }
 </Table>
 </div>
-    )
-}
-}
+    );
+};
+
 
 export default Author;
