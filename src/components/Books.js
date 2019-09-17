@@ -10,7 +10,7 @@ class Books extends Component {
       }
   }
   componentDidMount() {
-      axios.get(`http://libra-cek.herokuapp.com/API/Books/`)
+      axios.get(`https://libra-cek.herokuapp.com/API/Books/`)
     .then(res => {
       const books = res.data;
       this.setState({ books });
