@@ -5,12 +5,24 @@ import Table from 'react-bootstrap/Table'
 import axios from 'axios';
 
 
+<<<<<<< HEAD
 function Author() {
 
    const [author ,setAuthor] = useState([])
     
    const fetchAuthor = async () => {
        await axios.get(`http://libra-cek.herokuapp.com/API/Authors/`)
+=======
+class Author extends Component {
+    constructor(){
+        super()
+        this.state = {
+            author : []
+        }
+    }
+    componentDidMount() {
+        axios.get(`https://libra-cek.herokuapp.com/API/Authors/`)
+>>>>>>> d4aacbd0ce115b1feffe014fc75d4258237968df
       .then(res => {
         const author = res.data;
         setAuthor( author );
