@@ -5,7 +5,7 @@ class Nav extends Component {
 render(){
 return (
 
-    <div className = "nav-bar">
+    <div className = "navbar">
       <nav className="navbar" role="navigation" aria-label="main navigation">
     <div className="navbar-brand">
         <a className="navbar-item" href="/">
