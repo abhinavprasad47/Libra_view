@@ -24,8 +24,8 @@ function allUser(){
    <tbody>
      <tr>
        <td>{User.id}</td>
-       <td>{User.first_name}</td>
-       <td>{User.last_name}</td>
+       <td>{User.Name}</td>
+       <td>{User.Department}</td>
      </tr>
    </tbody>
    ))
