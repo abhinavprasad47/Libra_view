@@ -5,7 +5,7 @@ import Logs from "./Logs";
 import Books from "./Books";
 import Author from "./Author";
 import User from "./AddUser";
-import allUser from "./allUser"
+import AllUser from "./allUser"
 class Menu extends Component {
   render() {
     return (
@@ -44,7 +44,7 @@ class Menu extends Component {
           <Route path="/Books" component={Books} />
           <Route path="/Author" component={Author} />
           <Route path="/User" component={User} />
-          <Route path="/allUser" component ={allUser} />
+          <Route path="/allUser" component ={AllUser} />
         </Router>
       </div>
     );
