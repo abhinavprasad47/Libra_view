@@ -10,7 +10,7 @@ class Books extends Component {
       }
   }
   componentDidMount() {
-      axios.get(`https://libra-cek.herokuapp.com/API/Books/`)
+      axios.get(`https://api.sheety.co/d08f3ac4-6515-4555-843e-289072ca44dc`)
     .then(res => {
       const books = res.data;
       this.setState({ books });
@@ -32,12 +32,11 @@ class Books extends Component {
         {this.state.books.map(book => (
         <tbody>
           <tr>
-            <td>{book.Code.number_code}</td>
-            <td>{book.title}</td>
-            <td>{book.author.first_name}</td>
-            <td>{book.author.last_name}</td>
-            <td>{book.language}</td>
-            <td>{book.Edition}</td>
+     
+            <td>{book.tITLE}</td>
+            <td>{book.aUTHOR}</td>
+            <td>{book.eDITION}</td>
+            <td>{book.aCCESSIONNUMBER}</td>
           </tr>
         </tbody>
         ))
