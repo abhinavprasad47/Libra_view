@@ -6,7 +6,7 @@ import Table from 'react-bootstrap/Table'
 import axios from 'axios';
 
 
-function allUser(){
+function AllUser(){
     const [user ,setUser] = useState([])
     
     const fetchUser = async () => {
@@ -42,4 +42,4 @@ function allUser(){
 
 }
 
-export default allUser;
+export default AllUser;
