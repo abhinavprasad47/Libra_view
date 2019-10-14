@@ -6,15 +6,15 @@ import axios from 'axios';
 
 
 function allUser(){
-    const [User ,setUser] = useState([])
+    const [user ,setUser] = useState([])
     
     const fetchUser = async () => {
         await axios.get(`https://libra-cek.herokuapp.com/API/Users/`)
        .then(res => {
-         const User = res.data;
-         setUser( User );
+         const user = res.data;
+         setUser( user );
        })};
-       useEffect(()=> {fetchUser(User)},[User])
+       useEffect(()=> {fetchUser(user)},[user])
      return(
          <div className="content">
              <Table striped bordered hover>
@@ -25,12 +25,12 @@ function allUser(){
        <th>Last Name</th>
      </tr>
    </thead>
-   {User.map((User) => (
+   {user.map((user) => (
    <tbody>
      <tr>
-       <td>{User.id}</td>
-       <td>{User.Name}</td>
-       <td>{User.Department}</td>
+       <td>{user.id}</td>
+       <td>{user.Name}</td>
+       <td>{user.Department}</td>
      </tr>
    </tbody>
    ))
