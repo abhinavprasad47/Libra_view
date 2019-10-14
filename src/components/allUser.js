@@ -1,7 +1,7 @@
 import React from "react";
 
 function allUser(){
-    return( const [User ,setUser] = useState([])
+    const [User ,setUser] = useState([])
     
     const fetchUser = async () => {
         await axios.get(`https://libra-cek.herokuapp.com/API/Users/`)
