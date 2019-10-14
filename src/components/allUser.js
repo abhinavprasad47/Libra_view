@@ -25,7 +25,7 @@ function allUser(){
        <th>Last Name</th>
      </tr>
    </thead>
-   {author.map((aUser) => (
+   {User.map((aUser) => (
    <tbody>
      <tr>
        <td>{User.id}</td>
